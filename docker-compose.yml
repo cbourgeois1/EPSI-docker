@@ -1,4 +1,5 @@
-version:3.9
+version: 3.9
+services:
 OpenVPN:
   image: kylemanna/openvpn:2.4
   container_name: OpenVPN
