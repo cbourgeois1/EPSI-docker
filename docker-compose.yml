@@ -1,5 +1,5 @@
 version:3.9
-openvpn:
+OpenVPN:
   image: kylemanna/openvpn:2.4
   container_name: OpenVPN
   ports: 
