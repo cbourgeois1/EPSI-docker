@@ -1,11 +1,10 @@
 version:3.9
-openvpn:
-  image: kylemanna/openvpn:2.4
-  container_name: OpenVPN
-  ports: 
-    - "443:1194/UDP"
-  volumes:
-    - "/var/docker/openvpn/data:/var/data_openvpn"
-  restart: always
-    
-
+services:
+  openvpn:
+    image: kylemanna/openvpn:2.4
+    container_name: OpenVPN
+    ports: 
+      - "443:1194/UDP"
+    volumes:
+      - "/var/docker/openvpn/data:/var/data_openvpn"
+    restart: always
