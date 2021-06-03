@@ -16,4 +16,6 @@ We will implement a "GLPI Project" container by way of "docker-compose".
   *The most important software. He can be to realize inventory*
   
   #### Test
-  
+  - Using the plateform of Docker : https://labs.play-with-docker.com/
+  - realize a git clone to receipt dockerfile : https://github.com/cbourgeois1/EPSI-docker.git
+  - 
