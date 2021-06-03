@@ -1,1 +1,12 @@
+version: "3.8"
 
+services:
+  ocsinventory:
+    image: ocsinventory/ocsinventory-docker-image: 2.8
+    container_name: server_ocs
+    restart: always
+    ports:
+      - 90:80
+      - 443:443
+    volumes:
+      - 
