@@ -18,4 +18,4 @@ We will implement a "GLPI Project" container by way of "docker-compose".
   #### Test
   - Using the plateform of Docker : https://labs.play-with-docker.com/
   - realize a git clone to receipt dockerfile : https://github.com/cbourgeois1/EPSI-docker.git
-  - Installation in first, mysql-server [mysql.png]
+  - Installation in first, mysql-server [<mysql.png>]
