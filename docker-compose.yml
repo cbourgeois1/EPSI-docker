@@ -33,11 +33,10 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       entrypoint:
-      sh -c "
-        echo 'CREATE DATABASE IF NOT EXISTS glpidb; CREATE USER glpi_user@localhost; GRANT ALL PRIVILEGES ON glpidb.* TO glpi_user@% IDENTIFIED BY glpi; FLUSH PRIVILEGES;' > /docker-entrypoint-initdb.d/init.glpidb.sql;
+        sh -c "echo 'CREATE DATABASE IF NOT EXISTS glpidb; CREATE USER glpi_user@localhost; GRANT ALL PRIVILEGES ON glpidb.* TO glpi_user@% IDENTIFIED BY glpi; FLUSH PRIVILEGES;' > /docker-entrypoint-initdb.d/init.glpidb.sql;
         /usr/local/bin/docker-entrypoint.sh --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci"
       
-  glpi_project:
+   glpi_project:
     image: diouxx/glpi
     container_name: glpi_project
     ports:
