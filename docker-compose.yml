@@ -3,7 +3,7 @@ version: "3.8"
 services:
   ocsinventory:
     image: ocsinventory/ocsinventory-docker-image:2.8
-    container_name: ocs_server
+    container_name: ocsinventory
     restart: always
     ports:
       - 90:80
@@ -20,7 +20,7 @@ services:
       
   mysql:
     image: mysql:8.0.25
-    container_name: mysql_server
+    container_name: mysql
     hostname: mysql
     restart: always
     ports:
