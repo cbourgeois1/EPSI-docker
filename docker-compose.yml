@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   ocsinventory:
-    image: ocsinventory/ocsinventory-docker-image: "2.8"
+    image: ocsinventory/ocsinventory-docker-image:2.8
     container_name: ocs_server
     restart: always
     ports:
