@@ -1,5 +1,9 @@
-# Réalisation d'un conteneur OpenVPN
-## Contexte
-Nous avons décider de vouloir mettre en place la solution OpenVPN via l'utilisation d'un docker-compose. Mais aussi en utilisant un "Dockerfile" et un fichier avec l'extension ".env" afin de protéger les identifiants.
+# Implementation of GLPI Project
+## Context
+We will implement a "GLPI Project" container by way of "docker-compose".
 
-### Procédure
+### Procedure
+1. Implementation of ocs_inventory
+   * this software are very important for the "glpi project" because it makes it possible to caary out inventory on the hardware configuration, software. We can be to visualize on web interface.* 
+3. Implementation of mysql_server
+4. Implementation of GLPI_Project
