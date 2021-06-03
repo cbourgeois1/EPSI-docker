@@ -3,10 +3,32 @@ version: "3.8"
 services:
   ocsinventory:
     image: ocsinventory/ocsinventory-docker-image: 2.8
-    container_name: server_ocs
+    container_name: ocs_server
     restart: always
     ports:
       - 90:80
       - 443:443
     volumes:
-      - 
+      - "/var/docker/ocsinventory-server/data:/var/docker/ocsinventory-server/data_ocsinventory"
+    environment:
+      OCS_DB_SERVER: mysql
+      OCS_DB_USER: ocsuser
+      OCS_DB_PASS: ocspass
+      OCS_DB_NAME: ocsweb
+    depends_on:
+      - mysql
+      
+  mysql:
+    image: mysql:8.0.25
+    container_name: mysql_server
+    hostname: mysql
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - "/var/docker/mysql-server/data:/var/docker/mysql-server/data_mysql"
+     environment:
+      MYSQL_ROOT_PASSWORD: rootroot
+      MYSQL_USER: ocsuser
+      MYSQL_PASSWORD: ocspass
+      MYSQL_DATABASE: ocsweb
