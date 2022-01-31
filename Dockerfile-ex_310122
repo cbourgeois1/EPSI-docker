@@ -8,7 +8,7 @@ FROM ubuntu
 
 WORKDIR /app
 COPY --from=builder /go/main guestbook
-COPY guestbook/public public
+COPY public public
 
 EXPOSE 3000
 CMD ["./guestbook"]
