@@ -46,7 +46,7 @@ jobs:
         continue-on-error: true
 
       - name: Deploy application
-        run: kubectl set image deployment/guestbook-chris guestbook-chris=cbourgeois1/guestbook:$GITHUB_SHA
+        run: kubectl set image deployment/guestbook-chris guestbook=cbourgeois1/guestbook:$GITHUB_SHA
 
       - name: Expose application
         run: kubectl apply -f ./deploy
