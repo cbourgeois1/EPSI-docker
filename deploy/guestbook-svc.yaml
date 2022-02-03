@@ -11,4 +11,4 @@ spec:
     targetPort: 3000
     name: http
   selector:
-    app: guestbook
+    app: guestbook-chris
