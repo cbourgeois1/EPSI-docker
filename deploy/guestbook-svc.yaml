@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: guestbook-chris
   labels:
-    app: guestbook
+    app: guestbook-chris
 spec:
   type: ClusterIP
   ports:
