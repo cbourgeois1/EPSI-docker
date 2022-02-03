@@ -1,14 +1,14 @@
 FROM golang:1.10 as builder
 RUN go get github.com/codegangsta/negroni
 RUN go get github.com/gorilla/mux github.com/xyproto/simpleredis
-COPY guestbook/main.go .
+COPY main.go .
 RUN go build main.go
 
-FROM ubuntu
+FROM ubuntu:jammy
 
 WORKDIR /app
 COPY --from=builder /go/main guestbook
-COPY guestbook/public public
+COPY public public
 
 EXPOSE 3000
 CMD ["./guestbook"]
