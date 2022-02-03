@@ -42,7 +42,7 @@ jobs:
         uses: azure/setup-kubectl@v2.0
 
       - name: Deploy the application
-        run: kubectl create deployment guestbook-chris--image=cbourgeois1/guestbook:$GITHUB_SHA
+        run: kubectl create deployment guestbook-chris --image=cbourgeois1/guestbook:$GITHUB_SHA
         continue-on-error: true
 
       - name: Deploy application
